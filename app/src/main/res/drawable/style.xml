@@ -1,0 +1,9 @@
+<style xmlns:tools="http://schemas.android.com/tools"
+    name="ButtonStyle" parent="Widget.AppCompat.Button"
+    tools:ignore="MissingPrefix">
+    <!-- Customize your button style here -->
+    <item name="android:background">@color/custom_button_background</item>
+    <item name="android:textColor">@color/custom_button_text_color</item>
+    <item name="android:textSize">18sp</item>
+    <item name="android:padding">8dp</item>
+</style>

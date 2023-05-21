@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.pokedex">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="PokeDex"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PokeDex"
+        tools:targetApi="31">
+        <activity
+            android:name=".PokeDexMain"
+            android:exported="false"
+            android:resizeableActivity="false"
+            android:screenOrientation="landscape"
+            android:largestWidthLimitDp="320"
+            android:anyDensity="true"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+    <supports-screens
+        android:resizeable="false"
+        android:smallScreens="false"
+        android:normalScreens="true"
+        android:largeScreens="false"
+        android:xlargeScreens="false"
+        android:anyDensity="false"
+        android:requiresSmallestWidthDp="360"
+        android:compatibleWidthLimitDp="360"
+        android:largestWidthLimitDp="360"/>
+
+</manifest>
